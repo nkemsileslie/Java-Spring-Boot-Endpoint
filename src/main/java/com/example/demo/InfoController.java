@@ -17,11 +17,6 @@ public class InfoController {
         DayOfWeek dayOfWeek = now.getDayOfWeek();
         String currentDayOfWeek = dayOfWeek.toString();
 
-        // Validate UTC offset within +/-2
-        if (utcOffset < -2 || utcOffset > 2) {
-            // Return an error response with a custom status code
-            throw new InvalidUtcOffsetException();
-        }
 
         // Set the 'slackName' directly in your code
         String slackName = "leslie";
@@ -33,7 +28,7 @@ public class InfoController {
             currentDayOfWeek,
             now.toString(),
             track,
-            "URL to the GitHub file being run",
+            "https://github.com/nkemsileslie/Java-Spring-Boot-Endpoint/blob/master/src/main/java/com/example/demo/InfoController.java",
             "https://github.com/nkemsileslie/Java-Spring-Boot-Endpoint",
             statusCode = "200"
         );

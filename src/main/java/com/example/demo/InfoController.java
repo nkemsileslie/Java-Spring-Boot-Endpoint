@@ -23,7 +23,7 @@ public class InfoController {
         String track = "Backend";
 
         // Construct the response using a record
-        InfoResponse response = new InfoResponse(
+        return new InfoResponse(
             slackName,
             currentDayOfWeek,
             now.toString(),
@@ -32,8 +32,6 @@ public class InfoController {
             "https://github.com/nkemsileslie/Java-Spring-Boot-Endpoint",
             statusCode = "200"
         );
-
-        return response;
     }
 
     record InfoResponse(
